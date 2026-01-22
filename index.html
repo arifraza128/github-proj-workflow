@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organization Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="card">
+    <h2>Organization Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden">
+    <h2>Welcome to Organization Dashboard</h2>
+
+    <div class="events">
+        <div class="event">
+            <h3>Tech Conference</h3>
+            <p>Category: Technology</p>
+            <p>Price: ₹499</p>
+            <button onclick="pay('Tech Conference',499)">Attend</button>
+        </div>
+
+        <div class="event">
+            <h3>Cultural Fest</h3>
+            <p>Category: Culture</p>
+            <p>Price: ₹299</p>
+            <button onclick="pay('Cultural Fest',299)">Attend</button>
+        </div>
+
+        <div class="event">
+            <h3>Sports Meet</h3>
+            <p>Category: Sports</p>
+            <p>Price: ₹199</p>
+            <button onclick="pay('Sports Meet',199)">Attend</button>
+        </div>
+    </div>
+</div>
+
+<!-- PAYMENT -->
+<div id="payment" class="card hidden">
+    <h2>Payment</h2>
+    <p id="eventName"></p>
+    <p id="amount"></p>
+    <button onclick="success()">Pay Now</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
